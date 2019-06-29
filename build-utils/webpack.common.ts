@@ -90,7 +90,11 @@ const config: webpack.Configuration = {
       },
       {
         test: /\.(ttf|eot|woff(2)?)(\?[a-z0-9]+)?$/,
-        use: 'file-loader?name=fonts/[hash].[ext]',
+        use: 'file-loader?name=fonts/[name].[ext]',
+      },
+      {
+        test: /\.(png|svg|jpg|gif)/,
+        use: 'url-loader?name=images/[name].[ext]',
       },
     ],
   },

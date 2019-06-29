@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { connect } from 'react-redux';
-import { block } from 'bem-cn';
 
+import { block } from 'shared/helpers/bem';
 import { IAppReduxState, ICommunication } from 'shared/types/redux';
 import { Spinner } from 'shared/view/elements';
 
@@ -55,5 +55,4 @@ const actionsDispatch = {
   loadCountriesOptions: actions.loadCountries,
 };
 
-// TODO: with redux-thunk cannot use object as actionsDispatch
-export default connect(mapState, actionsDispatch as any)(DomainConfiguration);
+export default connect(mapState, actionsDispatch)(DomainConfiguration);

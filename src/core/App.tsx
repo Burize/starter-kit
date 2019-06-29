@@ -12,8 +12,6 @@ import './App.scss';
 
 const { store } = configureStore();
 
-
-
 const App = () => {
   return (
     <Provider store={store}>
